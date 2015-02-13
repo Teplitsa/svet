@@ -1,0 +1,176 @@
+/*---------------------------------------------------------
+ Widgets (_widgets.scss)
+-------------------------------------------------------- */
+
+.widget {
+	@include smart-margin($base*1.5);
+	@include rem('font-size', 16px);
+	line-height: 1.3;
+	color: $color-text-semi;
+	
+	select {
+		max-width: 100%;
+	}
+	ul,
+	ol {
+		padding-left: 0; //reset
+	}
+	li {
+		list-style: none; //reset		
+		@include rem('padding', 10px 0 0);	
+		&:last-of-type {
+			margin-bottom: 0; //reset			
+		}
+	}
+	.children,
+	.sub-menu {
+		margin-bottom: 0; //reset
+		li:before {
+			content: "\2013  ";
+		}
+	}
+	
+	
+	.lam-gallery {
+		ul {
+			list-style-type: none !important;
+			padding: 0; 
+			margin: 0 -3px;
+		}
+		
+		li {
+			list-style-type: none !important;
+			margin: 0 !important;		
+			padding: 3px;
+			float: left;
+			border: none;
+		}
+	}
+}
+
+.widget-title {
+	@include widget-title(26px);
+}
+
+#bottombar {
+	
+	.widget-title {
+		@include rem('font-size', 24px);
+		margin-bottom: 1em;
+	}
+		
+	li {
+		list-style: none; //reset		
+		@include rem('padding-top', 8px);
+		&:last-of-type {
+			margin-bottom: 0; //reset			
+		}
+	}
+	
+	.button {
+		@include button($color-link-one, 18px)
+	}
+	
+	@include for(large-screens) {
+		.empty-title {
+			@include rem('margin-top', $base*1.56);
+		}
+	}
+	
+}
+
+/** Types **/
+div[id*="leyka_donors_list"] {
+	.ldl-item .amount {
+		@include rem('font-size', 24px);
+	}
+	.ldl-item .meta,
+	.ldl-item .purpose {
+		@include rem('font-size', 20px);
+	}
+}
+
+div[id*="leyka_campaign_card_widget"] {
+	
+	.lk-info {
+		p {
+			@include rem('font-size', 16px);
+			line-height: 1.3;
+		}
+		
+		h4 {
+			font-size: 1.2em;
+		}
+	}
+		
+	.lk-thumbnail a {
+		display: block;
+		@include transition-all(0.3s);
+		border: 2px solid $color-secondary;
+		padding: 1px;
+			
+		&:hover, &:focus, &:active {
+			border: 2px solid $color-link-three;
+			padding: 1px;
+		}
+	}
+	
+	.lk-title a, .lk-title a:visited {
+		color: $color-text-black;		
+		&:hover, &:focus, &:active {
+			color: $color-link-three;
+			border-color: $color-link-three;
+		}
+	}
+	.leyka-scale-button-alone a {
+		background: $color-link-two;
+		font-family: $sans;
+		text-transform: none;		
+		@include rem('font-size', 20px);
+		
+		&:hover, &:focus, &:active {
+			background: $color-link-three;
+		}
+	}
+}
+
+
+/** Side only **/
+#secondary {
+	.widget_nav_menu {
+		div[class *= "container"] {
+			border: 4px solid $color-border-normal;		
+		}
+		ul {
+			@include rem('padding', 7px 20px 20px);
+		}
+		
+		li {			
+			@include rem('font-size', 21px);
+			line-height: 1.15;
+			@include rem('padding', 0 10px);			
+			@include rem('margin-top', 9px);
+			text-transform: lowercase;
+			a {
+				display: inline-block;
+				@include rem('padding', 7px 0 3px);
+			}
+		}
+		
+		.current-menu-item {
+			background: $color-link-one;
+			a {
+				color: $color-white;
+				&:focus, &:active {
+					text-decoration: underline;
+				}
+			}			
+		}
+	}
+	
+	div[id*="leyka_campaign_card_widget"] .lk-info p {
+		//@include rem('font-size', 16px);
+		//line-height: 1.3;
+	}
+	
+}

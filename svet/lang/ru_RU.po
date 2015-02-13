@@ -1,0 +1,535 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Hatemap Design\n"
+"POT-Creation-Date: 2015-01-14 13:17+0300\n"
+"PO-Revision-Date: 2015-01-14 13:17+0300\n"
+"Last-Translator: Anna Ladoshkina <webdev@foralien.com>\n"
+"Language-Team: Anna Ladoshkina <webdev@foralien.com>\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: footer.php:11
+msgid "Teplitsa of social technologies"
+msgstr "﻿Теплица социальных технологий"
+
+#: footer.php:45
+#, php-format
+msgid ""
+"All materials of the site are avaliabe under license %s. Website restpects "
+"W3C accessibility standard %s"
+msgstr ""
+"﻿Материалы сайта, если не указано иное, доступны по лицензии %s. Сайт "
+"совместим с W3C стандартом %s."
+
+#: functions.php:37
+msgid "Primary Menu"
+msgstr "Главное меню"
+
+#: functions.php:38
+msgid "Journal Menu"
+msgstr "Подменю Журнал"
+
+#: header.php:24
+msgid "Skip to content"
+msgstr "Перейти к основному содержанию"
+
+#: header.php:54
+msgid "Main menu"
+msgstr "Главное меню"
+
+#: header.php:56
+msgid "Menu"
+msgstr "Меню"
+
+#: inc/admin.php:149
+msgid "Custom fields"
+msgstr "Мета-поля"
+
+#: inc/extras.php:38
+#, php-format
+msgid "Continue reading - %s"
+msgstr "Продолжить чтение - %s"
+
+#: inc/extras.php:116
+msgid "On top"
+msgstr "К началу"
+
+#: inc/extras.php:191
+msgid "Log Out"
+msgstr "Выйти"
+
+#: inc/extras.php:195
+msgid "Log In"
+msgstr "Войти"
+
+#: inc/media.php:11
+msgid "Column-width"
+msgstr "По ширине колонки"
+
+#: inc/post-types.php:39 inc/post-types.php:41
+msgid "Films"
+msgstr "Фильмы"
+
+#: inc/post-types.php:40 partials/content-film.php:8
+msgid "Film"
+msgstr "Фильм"
+
+#: inc/post-types.php:42 inc/post-types.php:44
+msgid "Add film"
+msgstr "Добавить фильм"
+
+#: inc/post-types.php:43
+msgid "Add new film"
+msgstr "Добавить новый"
+
+#: inc/post-types.php:45
+msgid "New film"
+msgstr "Новый фильм"
+
+#: inc/post-types.php:46
+msgid "Edit film"
+msgstr "Редактировать"
+
+#: inc/post-types.php:47
+msgid "View film"
+msgstr "Просмотреть"
+
+#: inc/post-types.php:48
+msgid "All films"
+msgstr "Все фильмы"
+
+#: inc/post-types.php:49
+msgid "Search films"
+msgstr "Поиск"
+
+#: inc/post-types.php:50
+msgid "Parent film"
+msgstr "Родительский"
+
+#: inc/post-types.php:51
+msgid "No films found"
+msgstr "Фильмы не найдены"
+
+#: inc/post-types.php:52
+msgid "No films found in Trash"
+msgstr "В Корзине фильмы не найдены"
+
+#: inc/post-types.php:73 inc/post-types.php:75
+msgid "Blocks"
+msgstr "Блоки"
+
+#: inc/post-types.php:74
+msgid "Block"
+msgstr "Блок"
+
+#: inc/post-types.php:76 inc/post-types.php:78
+msgid "Add block"
+msgstr "Добавить блок"
+
+#: inc/post-types.php:77
+msgid "Add new block"
+msgstr "Добавить новый"
+
+#: inc/post-types.php:79
+msgid "New block"
+msgstr "Новый блок"
+
+#: inc/post-types.php:80
+msgid "Edit block"
+msgstr "Редактировать"
+
+#: inc/post-types.php:81
+msgid "View block"
+msgstr "Просмотреть"
+
+#: inc/post-types.php:82
+msgid "All blocks"
+msgstr "Все блоки"
+
+#: inc/post-types.php:83
+msgid "Search blocks"
+msgstr "Поиск блоков"
+
+#: inc/post-types.php:84
+msgid "Parent block"
+msgstr "Родительский блок"
+
+#: inc/post-types.php:85
+msgid "No blocks found"
+msgstr "Блоки не найдены"
+
+#: inc/post-types.php:86
+msgid "No blocks found in Trash"
+msgstr "В Корзине блоки не найдены"
+
+#: inc/shortcodes.php:39
+#, php-format
+msgid "Thumbnail for page - %s"
+msgstr "Заставка к странице - %s"
+
+#: inc/shortcodes.php:166
+msgid "More"
+msgstr "Далее"
+
+#: inc/shortcodes.php:167
+msgid "Close"
+msgstr "Закрыть"
+
+#: inc/template-tags.php:141
+msgid "Older"
+msgstr "Предшеств."
+
+#: inc/template-tags.php:142
+msgid "Newer"
+msgstr "Послед."
+
+#: inc/template-tags.php:168
+msgid "Paging navigation"
+msgstr "Постраничная навигация"
+
+#: inc/template-tags.php:248
+msgid "Post navigation"
+msgstr "Навигация между материалами"
+
+#: inc/template-tags.php:267
+msgid "Category"
+msgstr "Рубрика"
+
+#: inc/template-tags.php:271
+msgid "Publishing date"
+msgstr "Дата публикации"
+
+#: inc/template-tags.php:288
+#, php-format
+msgid "Published %s in category: %s"
+msgstr "Опубликовано %s в рубрике %s"
+
+#: inc/template-tags.php:325 partials/title-section.php:31
+msgid "Films Catalogue"
+msgstr "Каталог фильмов"
+
+#: inc/template-tags.php:371 partials/content.php:16
+#, php-format
+msgid "Thumbnail for - %s"
+msgstr "Иллюстрация к статье - %s"
+
+#: inc/widgets.php:194
+msgid "List of recent posts with some styling"
+msgstr "Список последних материалов "
+
+#: inc/widgets.php:196
+msgid "Recent Posts"
+msgstr "﻿Последние записи"
+
+#: inc/widgets.php:301
+#, php-format
+msgid "Permalink to %s"
+msgstr "﻿Постоянная ссылка на %s"
+
+#: inc/widgets.php:411
+msgid "Don't show"
+msgstr "Не показывать"
+
+#: inc/widgets.php:412
+msgid "Square thumbnail"
+msgstr "Квадратная миниатюра"
+
+#: inc/widgets.php:413
+msgid "Landscape thumnbail"
+msgstr "Горизонтальная миниатюра"
+
+#: inc/widgets.php:418
+msgid "Title"
+msgstr "Заголовок"
+
+#: inc/widgets.php:423
+msgid "Limit"
+msgstr "Кол.-во"
+
+#: inc/widgets.php:431
+msgid "Display Date?"
+msgstr "Отображать дату?"
+
+#: inc/widgets.php:435
+msgid "Display Excerpt?"
+msgstr "Отображать цитату?"
+
+#: inc/widgets.php:439
+msgid "Excerpt Length"
+msgstr "Длина цитаты"
+
+#: inc/widgets.php:446
+msgid "Thumbnail"
+msgstr "﻿Миниатюра"
+
+#: inc/widgets.php:457
+msgid "Choose the Post Type"
+msgstr "Выберите тип контента"
+
+#: inc/widgets.php:460
+msgid "Select post type"
+msgstr "Выберите тип контента"
+
+#: inc/widgets.php:468
+msgid "Choose the Taxonomy"
+msgstr "Выберите таксономию"
+
+#: inc/widgets.php:471
+msgid "Select taxonomy"
+msgstr "Выберите таксономию"
+
+#: inc/widgets.php:480
+msgid "Term slug"
+msgstr "Ярлык термина"
+
+#: inc/widgets.php:482
+msgid ""
+"Copy paste a slug (or comma-separated list of several slugs) of the term"
+msgstr "Скопируйте ярлык термина (или несколько ярлыков, разделенных запятыми)"
+
+#: inc/widgets.php:609
+msgid "Social Buttons"
+msgstr "Социальные кнопки"
+
+#: inc/widgets.php:611
+msgid "Social links menu with optional text"
+msgstr "﻿Социальная ссылки с дополнительным текстом"
+
+#: page-show.php:20
+msgid "You have to be authorized to view films."
+msgstr ""
+"Вы должны быть авторизованы для просмотра фильмов. Пожалуйста, укажите ваш "
+"логин и пароль в форме ниже."
+
+#: page-show.php:50
+msgid "View"
+msgstr "Просмотр"
+
+#: partials/content-film.php:15 partials/content_single-film.php:19
+#, php-format
+msgid "Poster for film - %s"
+msgstr "Постер фильма - %s"
+
+#: partials/content-none.php:13
+msgid "Nothing Found"
+msgstr "Ничего не найдено"
+
+#: partials/content-none.php:19
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Please use menu "
+"to navigate our site"
+msgstr ""
+"﻿К сожалению, мы ничего не нашли по вашему запросу. Пожалуйста, используйте "
+"меню для навигации по сайту."
+
+#: partials/content.php:8
+msgid "News article"
+msgstr "Статья"
+
+#: partials/title-section.php:34
+msgid "Search results"
+msgstr "﻿Результаты поиска"
+
+#~ msgid "Search Results for: %s"
+#~ msgstr "﻿Результаты поиска для: %s"
+
+#~ msgid ""
+#~ "Teplitsa of social technologies - crowdsourcing, technologies for the "
+#~ "charity"
+#~ msgstr ""
+#~ "Теплица социальных технологий – краудсорсинг, технологии для третьего "
+#~ "сектора"
+
+#~ msgid "All materials of the site are avaliabe under license %s"
+#~ msgstr "Материалы сайта, если не указано иное, доступны по лицензии %s"
+
+#~ msgid "Page %s"
+#~ msgstr "Стр. %s"
+
+#~ msgid "Continue reading for article - %s"
+#~ msgstr "Продолжить чтение статьи  - %s"
+
+#~ msgid "Home"
+#~ msgstr "Главная"
+
+#~ msgid "Attacks categories"
+#~ msgstr "Категории нападений"
+
+#~ msgid "Attacks category"
+#~ msgstr "Категория нападений"
+
+#~ msgid "Categories"
+#~ msgstr "Категории"
+
+#~ msgid "All Categories"
+#~ msgstr "Все категории"
+
+#~ msgid "Edit Category"
+#~ msgstr "Редактировать"
+
+#~ msgid "View Category"
+#~ msgstr "Просмотреть"
+
+#~ msgid "Update Category"
+#~ msgstr "Обновить"
+
+#~ msgid "Add new Category"
+#~ msgstr "Добавить новую категорию"
+
+#~ msgid "New Category Name"
+#~ msgstr "Новое наименование категории"
+
+#~ msgid "Parent Category"
+#~ msgstr "Родительская"
+
+#~ msgid "Parent Category:"
+#~ msgstr "Родительская:"
+
+#~ msgid "Search Categories"
+#~ msgstr "Поиск категорий"
+
+#~ msgid "Popular categories"
+#~ msgstr "Часто используемые"
+
+#~ msgid "Separate with commas"
+#~ msgstr "Разделять запятыми"
+
+#~ msgid "Add or Remove Categories"
+#~ msgstr "Добавить или удалить категории"
+
+#~ msgid "Select from popular"
+#~ msgstr "Выбрать из часто используемых"
+
+#~ msgid "Not found"
+#~ msgstr "Не найдено"
+
+#~ msgid "Places categories"
+#~ msgstr "Категории мест"
+
+#~ msgid "Places category"
+#~ msgstr "Категория мест"
+
+#~ msgid "Events categories"
+#~ msgstr "Категории событий"
+
+#~ msgid "Events category"
+#~ msgstr "Категория событий"
+
+#~ msgid "Attacks"
+#~ msgstr "Нападения"
+
+#~ msgid "Attack"
+#~ msgstr "Нападение"
+
+#~ msgid "Add attack"
+#~ msgstr "Добавить нападение"
+
+#~ msgid "Add new attack"
+#~ msgstr "Добавить новое"
+
+#~ msgid "New attack"
+#~ msgstr "Новое нападение"
+
+#~ msgid "Edit attack"
+#~ msgstr "Редактировать"
+
+#~ msgid "View attack"
+#~ msgstr "Просмотреть"
+
+#~ msgid "All attacks"
+#~ msgstr "Все нападения"
+
+#~ msgid "Search attacks"
+#~ msgstr "Поиск"
+
+#~ msgid "Parent attack"
+#~ msgstr "Родительское"
+
+#~ msgid "No attacks found"
+#~ msgstr "Нападения не найдены"
+
+#~ msgid "No attacks found in Trash"
+#~ msgstr "В Корзине нападения не найдены"
+
+#~ msgid "Places"
+#~ msgstr "Места"
+
+#~ msgid "Place"
+#~ msgstr "Место"
+
+#~ msgid "Add place"
+#~ msgstr "Добавить место"
+
+#~ msgid "Add new place"
+#~ msgstr "Добавить новое"
+
+#~ msgid "New place"
+#~ msgstr "Новое место"
+
+#~ msgid "Edit place"
+#~ msgstr "Редактировать"
+
+#~ msgid "View place"
+#~ msgstr "Просмотреть"
+
+#~ msgid "All places"
+#~ msgstr "Все места"
+
+#~ msgid "Search places"
+#~ msgstr "Поиск"
+
+#~ msgid "Parent place"
+#~ msgstr "Родительское"
+
+#~ msgid "No places found"
+#~ msgstr "Места не найдены"
+
+#~ msgid "No places found in Trash"
+#~ msgstr "В Корзине места не найдены"
+
+#~ msgid "Events"
+#~ msgstr "События"
+
+#~ msgid "Event"
+#~ msgstr "Событие"
+
+#~ msgid "Add event"
+#~ msgstr "Добавить событие"
+
+#~ msgid "Add new event"
+#~ msgstr "Добавить новое"
+
+#~ msgid "New event"
+#~ msgstr "Новое событие"
+
+#~ msgid "Edit event"
+#~ msgstr "Редактировать"
+
+#~ msgid "View event"
+#~ msgstr "Просмотреть"
+
+#~ msgid "All events"
+#~ msgstr "Все события"
+
+#~ msgid "Search events"
+#~ msgstr "Поиск"
+
+#~ msgid "Parent event"
+#~ msgstr "Родительское"
+
+#~ msgid "No events found"
+#~ msgstr "События не найдены"
+
+#~ msgid "No events found in Trash"
+#~ msgstr "В Корзине события не найдены"

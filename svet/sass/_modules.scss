@@ -1,0 +1,415 @@
+/*---------------------------------------------------------
+LAM Galleries (_modules.scss)
+-------------------------------------------------------- */
+.lam-clearfix {
+	@include clearfix;
+}
+
+.fresco {
+	display: inline-block;
+}
+
+.lam-gallery * {	
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.lam-gallery .fresco {
+	display: block;
+	width: 100%;
+	border: 2px solid #f1f1f1;
+	padding: 1px;
+	@include transition(all 0.3s);
+		
+	&:hover, &:focus, &:active {
+		border: 2px solid $color-link-two;
+		padding: 1px;
+	}
+	
+	img {
+		max-width: 100%;	
+		height: auto;
+		vertical-align: middle;
+	}
+}
+
+
+.entry-content .lam-gallery {
+	@include smart-margin(1.5em);
+	width: 98%;
+}
+
+.entry-content .lam-gallery,
+.lam-gallery {
+	ul {
+		list-style-type: none !important;
+		padding: 0; 
+		margin: 0 -5px;
+	}
+	
+	li {
+		list-style-type: none !important;
+		margin: 0 !important;		
+		padding: 5px;
+		float: left;
+	}
+	
+	.cols-1 li{
+		width: 100%; }
+		
+	.cols-2 li{
+		width: 50%; }
+		
+	.cols-3 li{
+		width: 33.3%; }
+	
+	.cols-4 li{
+		width: 25%; }
+	
+	.cols-5 li{
+		width: 20%; }
+		
+	.cols-6 li{
+		width: 16.6%; }
+		
+	.cols-7 li{
+		width: 14.28%; }
+		
+	.cols-8 li{
+		width: 12.5%; }	
+}
+
+.fr-caption {
+	h3 {
+		color: $color-white;
+		font-size: 14px;
+	}
+}
+
+/*---------------------------------------------------------
+ Top Link (_modules.scss)
+-------------------------------------------------------- */
+@mixin top-link {
+	display:block;
+	position:fixed;
+	right: 10px;
+	bottom: 14px;		
+	z-index: 900;	
+	cursor: pointer;
+	
+	a {
+		display: inline-block;		
+		color: #222222;
+		@include rem('font-size', 16px);
+		line-height: 1.1;
+		text-decoration: none;        
+		text-shadow: 1px 1px 1px #F2F2F2;
+		border: 1px solid #cecece;	
+		background: #eee;
+		background: rgba(230, 230, 230, 0.9);
+		padding: 0.45em 1em;
+		@include border-radius(4px);
+		
+		&:hover,
+		&:active,
+		&:focus {
+			background: #d2d2d2;
+			background: rgba(200, 200, 200, 0.9);
+			border: 1px solid #c5c5c5;
+		}
+	}
+}
+
+#top-link {
+	@include top-link;
+}
+
+.no-js #top-link,
+.ie6 #top-link { display: none !important; }
+
+
+
+/*---------------------------------------------------------
+ Search (_modules.scss)
+-------------------------------------------------------- */
+
+.search-form {
+	label {
+		display: inline-block;		
+		@include rem('margin-bottom', 5px);		
+	}
+	
+	.search-field {
+		@include rem('padding', 5px);		
+	}
+	
+	.search-submit {
+		@include fixed-button($color-link-one, 16px);
+	}
+}
+
+#bottombar .search-form .search-field {
+	border-color: #ccc;
+	&:focus, &:active {
+		border-color: #999;
+	}
+}
+
+
+#primary .search-holder {
+	margin-bottom: $base*1.5;
+	
+	.res-count {
+		padding-top: 4px;
+		font-size: 11px;	
+	}
+}
+
+.tpl-search {
+	@include smart-margin($base*1.5);
+		
+	.entry-header {
+		@include rem('margin-bottom', $base/2);
+	}
+	
+	.entry-title {
+		@include post-title(30px);
+	}
+		
+	cite {
+		display: block;
+		@include rem('font-size', 16px);
+		font-weight: normal;
+		color: $color-text-semi;
+		@include rem('margin-top', 8px);
+	}
+	
+	.entry-summary p {
+		margin: 0;
+	}
+}
+
+
+/*---------------------------------------------------------
+ Custom Toggle (_modules.scss)
+-------------------------------------------------------- */
+.tst-toggle {
+	.tst-toggle-content {
+		display: none;	
+	}
+	
+	.tst-toggle-trigger {
+		span {
+			display: inline-block;
+			color: $color-link-one;
+			border-bottom: 1px dashed;
+			cursor: pointer;
+			@include rem('font-size', 12px);	
+			&:hover {
+				color: $color-link-two;
+			}
+		}
+		.close {
+			display: none;		
+		}
+	}
+}
+
+.tst-toggle.toggled {
+	.tst-toggle-content {
+		display: block;	
+	}
+	
+	.tst-toggle-trigger {
+		@include rem('margin-top', $base*0.75);	
+	}
+	.tst-toggle-trigger .open {
+		display: none;
+	}
+	.tst-toggle-trigger .close {
+		display: inline-block;		
+	}
+}
+
+
+
+/*---------------------------------------------------------
+ Symple shortcodes corrections (_modules.scss)
+-------------------------------------------------------- */
+.entry-content .symple-toggle.symple-all {
+	@include smart-margin(1.5714em);
+	
+	.symple-toggle-trigger {
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+.symple-tabs ul.ui-tabs-nav .ui-state-active a {
+	height: 45px !important;
+}
+
+
+/*---------------------------------------------------------
+ Repeatable blocks (_modules.scss)
+-------------------------------------------------------- */
+.repeatable-blocks {
+	@include smart-margin($base);
+	
+	.rb-item {
+		@include smart-margin($base);		
+	}
+	
+	h3 {
+		@include rem('margin-bottom', $base*0.5);	
+	}
+	
+	.rb-image {
+		@include rem('margin-bottom', $base*0.5);	
+	}
+	
+	@include for(medium-screens) {
+		margin-bottom: 0;
+	}	
+	
+}
+
+
+/*---------------------------------------------------------
+ Partners gallery (_modules.scss)
+-------------------------------------------------------- */
+.partners.logo-gallery {
+	
+	.bit {
+		padding: 5px;
+		&:nth-of-type(3n+1){
+			clear: left;
+		}
+		@include for(medium-screens) {
+			&:nth-of-type(3n+1){
+				clear: none;
+			}
+			&:nth-of-type(4n+1){
+				clear: left;
+			}
+		}
+		@include for(large-screens) {
+			&:nth-of-type(4n+1){
+				clear: none;
+			}
+			&:nth-of-type(6n+1){
+				clear: left;
+			}
+		}
+	}
+	
+	.logo {
+		border: 1px solid $color-border-light;
+		position: relative;
+	}
+	.logo-frame {
+		@include logo-frame;
+	}
+	
+	.logo .partner-cat {		
+		font-size: 10px;
+		text-transform: uppercase;
+		background: rgba(150,150,150, 0.95);
+		color: #fff;
+		padding: 5px 8px;
+		display: none;
+		position: absolute;
+		z-index: 100;
+		max-width: 90%;
+		left: 6%;
+		top: 10%;
+		margin: 0;		
+	}
+	
+	.logo:hover .partner-cat {
+		display: inline-block;
+	}
+}
+
+.partners.logo-gallery.frame {
+	margin: 0 -5px;
+}
+
+
+/*---------------------------------------------------------
+  Yandex search (_modules.scss)
+-------------------------------------------------------- */
+.ya-site-form {
+	table {
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+	td, tr, th {
+		border: none;
+		padding: 0;
+	}
+	
+	.ya-site-form__search-input {
+		padding: 0;
+	}
+	.ya-site-form__input input {
+		padding: 6px;
+	}
+	
+	input.ya-site-form__submit_type_image {
+		
+	}
+}
+
+#ya-site-results {
+	.b-head_type_search-simple {
+		display: none;
+	}
+	
+	.b-serp-item__content {
+		line-height: 1.4;
+	}
+	
+	.b-serp-item__title {
+		display: inline-block;
+		padding-bottom: 0.65em;
+	}
+	
+	.b-serp-item {
+		margin-bottom: 1.8em;
+	}
+	
+	.b-serp-item__number {
+		display: none;
+	}
+	
+	.b-body-items {
+		padding-left: 0;
+	}
+}
+
+
+
+/*---------------------------------------------------------
+  Login form (_modules.scss)
+-------------------------------------------------------- */
+.svet-login-form {
+	border: 1px solid $color-border-normal;
+	padding: $base;
+	@iclude border-radius(3px);
+	
+	label[for="user_login"],
+	label[for = "user_pass"] {
+		display: block;
+	}
+	
+	.login-remember {
+		text-transform: lowercase;
+	}
+	
+	.login-submit input {
+		@include button($color-link-one, 21px);
+	}
+}

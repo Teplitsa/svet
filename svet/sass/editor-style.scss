@@ -1,0 +1,69 @@
+/* modules */
+@import 'bourbon';
+
+@import 'font';
+@import 'reset';
+@import 'presets';
+@import 'utility';
+@import 'forms';
+@import 'semantics';
+
+
+
+html .mceContentBody {	
+	@include rem('margin', 20px);
+}
+
+body {	
+	max-width: 730px;
+	background-color: $color-white;
+	text-rendering: optimizeLegibility;
+	@include rem('font-size', 24px);
+	line-height: 1.3;
+	color: $color-text;
+	font-family: $sans;	
+}
+
+
+a {
+	color: $color-link-one;	
+	text-decoration: none; //reset
+	border-bottom: 1px solid transparent;
+	
+	&:visited {
+		color: $color-link-one;
+	}
+	
+	&:hover, &:focus, &:active {
+		color: $color-link-three;
+		border-color: $color-link-three;
+	}
+}
+
+p {
+	@include rem('margin-bottom', $base);
+	@include rem('margin-top', $base);
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+p,ul,ol,dl,blockquote {
+	@extend .break;
+}
+
+
+// some content
+@include post-content-elements;
+@include post-content-defaults;
+
+
+
+//media
+.wp-caption {
+	background: transparent;
+	border: none;
+}

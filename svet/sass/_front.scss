@@ -1,0 +1,873 @@
+/*---------------------------------------------------------
+ Global Layout (_front.scss)
+-------------------------------------------------------- */
+html {
+	font-size: 62.5%; //10px
+	background-color: $color-white;
+}
+body {
+	background-color: $color-white;
+	text-rendering: optimizeLegibility;
+	@include rem('font-size', 24px);
+	line-height: 1.3;
+	color: $color-text;
+	font-family: $sans;	
+}
+
+
+a {
+	color: $color-link-one;	
+	text-decoration: none; //reset
+	border-bottom: 1px solid transparent;
+	
+	&:visited {
+		color: $color-link-one;
+	}
+	
+	&:hover, &:focus, &:active {
+		color: $color-link-three;
+		border-color: $color-link-three;
+	}
+}
+
+p {
+	@include rem('margin-bottom', $base);
+	@include rem('margin-top', $base);
+	&:first-child {
+		margin-top: 0;
+	}
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+p,ul,ol,dl,blockquote {
+	@extend .break;
+}
+
+
+/** Structure **/
+
+.container {
+	width: 85%;
+	max-width: $width;
+	margin: 0 auto;
+}
+
+.site-branding {
+	@include rem('padding', $base*0.9 0);
+	text-align: center;
+	
+	.site-title {
+		@include rem('font-size', 22px);
+		
+		.name {
+			border-bottom: 1px solid $color-text-light;			
+		}
+		
+		.title-wide {
+			display: block;
+			@include for(large-screens) {
+				display: inline-block;
+				position: relative;
+				padding-bottom: 20px;
+			}
+		}
+		
+		a {			
+			@include transition-all(0.5s);
+			border: none;
+			
+			&:hover, &:focus, &:active {
+				@include transform(scale(1.05));
+				.name {
+					color: #000;
+					border-bottom: 4px double $color-text-light;	
+				}
+			}			
+		}		
+	}
+
+	
+	#logo {
+		display: block;
+		@include rem('padding', $base*0.7 0);
+		text-align: center;
+		
+		
+		@include for(large-screens) {
+			width: 180px;
+			text-align: center;
+			padding: 0 10px;
+			position: absolute;
+			top: -15px;
+			right: -136px;
+			background: $color-white;
+			
+		}
+	}
+	
+	.site-description {
+		@include rem('font-size', 18px);
+		color: $color-link-one;
+		margin: 0;
+	}
+}
+
+.main-navigation {
+	background: $color-border-light;
+	border-top: 1px solid darken($color-border-light, 5%);
+	border-bottom: 1px solid darken($color-border-light, 5%);
+}
+
+.site-content {
+	@include rem('padding', $base*1.5 0);
+}
+
+.site-main {
+	@include for(medium-screens) { min-height: 400px; }
+}
+
+.section-header {
+	@include rem('margin-bottom', $base*1.5);
+}
+.section-title {
+	@include section-title;
+}
+
+#bottombar {
+	background: $color-secondary;
+	border-top: 1px solid $color-border-normal;
+	border-bottom: 1px solid $color-border-normal;
+	@include rem('padding', $base 0);
+	
+	
+}
+
+.site-footer {
+	@include rem('padding', $base/2 0);
+	@include rem('font-size', 13px);
+	line-height: 1.2;
+	color: $color-text-semi;	
+	
+	.te-st-bn {
+		text-align: right;
+		position: relative;
+		height: 51px;
+		
+		a {
+			display: block;
+			width: 104px;
+			position: absolute;
+			top: 0;
+			right: 0;
+			border: 1px dotted transparent;
+			padding: 1px;
+			&:hover, &:focus, &:active {
+				border-color: $color-text-semi;
+			}
+		}
+		
+		span {
+			display: inline-block;
+			margin-right: 115px;
+			padding-top: 10px;
+		}
+	}
+}
+
+
+/** Posts */
+.thumbnail-link {
+	display: block;
+	@include transition-all(0.3s);
+	border: 2px solid $color-secondary;
+	padding: 1px;
+		
+	&:hover, &:focus, &:active {
+		border: 2px solid $color-link-three;
+		padding: 1px;
+	}
+}
+
+.more-link {
+	display: inline-block;
+	padding: 1px;
+	@include transition-all(0.3s);
+	
+	&:hover, &:focus, &:active {
+		background: $color-link-one;
+		color: $color-white;
+	}
+}
+
+	
+.tpl-post {
+	@include smart-margin($base*1.5);
+		
+	.entry-header {
+		@include rem('margin-bottom', $base);
+	}
+	
+	.entry-title {
+		@include post-title(30px);
+	}
+	
+	.entry-meta {
+		color: $color-text-semi;
+		font-size: 0.9em;
+		@include rem('margin-bottom', 10px);
+		
+		time {
+			@include rem('margin-right', 10px);
+		}
+		
+		.category {			
+			a {
+				display: inline-block;
+				background: $color-link-two;
+				border-bottom: 4px double transparent;
+				color: $color-white;
+				@include rem('padding', 4px 15px 0);
+				text-transform: lowercase;
+				@include transition-all(0.3s);
+				
+				&:hover, &:focus, &:active {
+					background: $color-link-three;
+					border-color: $color-white;
+				}
+			}
+		}
+	}	
+}
+
+.tpl-film {
+	@include smart-margin($base*1.5);
+		
+	.entry-header {
+		@include rem('margin-bottom', $base*1.2);
+	}
+	
+	.entry-title {
+		@include post-title(30px);
+	}
+	
+	.entry-meta {
+		letter-spacing: 0.1em;
+		font-size: 0.8em;
+		@include rem('margin-top', 12px);
+		.meta-label {
+			font-weight: bold;
+		}
+	}
+}
+
+
+// posts nav
+@mixin paging-item {
+	display: inline-block;
+	background: $color-border-normal;
+	border: 2px solid $color-border-normal;
+	@include rem('padding', 0px 10px);
+	@include transition (all 0.3s);
+	
+	&:hover, &:focus, &:active {
+		background: $color-link-one;
+		border-color: $color-link-one;
+		color: $color-white;
+	}
+}
+
+.pagination {
+	
+	.page-numbers {
+		@include paging-item;
+	}
+	
+	.current, .current:hover, .current:focus, .current:active  {
+		background: $color-white;
+		border-color: $color-text;
+		color: $color-text;
+	}
+}
+
+
+/** Single **/
+.crumbs {
+	color: $color-text-semi;
+	text-transform: lowercase;
+	@include rem('margin-bottom', $base/6);
+	
+	a {
+		color: $color-link-two;
+		border-bottom: 1px solid transparent;
+		
+		&:visited {
+			color: $color-link-two;
+		}
+		&:hover, &:focus, &:active {
+			color: $color-link-three;
+			border-color: $color-link-three;
+		}
+	}
+}
+
+.tpl-post-full {
+	
+	.entry-summary {
+		@include rem('margin-bottom', $base);
+		font-size: 1.2em;
+		font-style: italic;
+	}
+	
+	.entry-media {
+		@include rem('margin-bottom', $base);
+	}
+	
+	.entry-footer {
+		position: relative;
+		padding-top: $base/2;
+		margin-top: $base;
+		color: $color-text-light;
+		
+		&:before {
+			content: '';
+			display: block;
+			width: 54px;
+			height: 2px;
+			background: $color-border-normal;			
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+		
+		.date {
+			color: $color-text;
+		}
+		
+	}
+}
+
+
+// nav
+.post-navigation {
+	@include rem('margin-top', $base);
+}
+
+.nav-links {	
+	a {
+		@include paging-item;
+		font-family: Arial, Helvetica, sans-serif;
+		font-weight: bold;
+		margin-right: 8px;
+	}
+	
+}
+
+
+/** Pages **/
+.page-blocks {
+	
+	.bit {
+		@include for(small-screens){
+			&:nth-of-type(2n+1){
+				clear: left;
+			}
+		}
+		
+		@include for(medium-screens){
+			&:nth-of-type(2n+1){
+				clear: none;
+			}
+			&:nth-of-type(3n+1){
+				clear: left;
+			}
+		}
+		margin-bottom: $base;
+	}
+}
+
+@mixin pic-block-border($color : blue){
+	
+	padding: 8px;
+	width: 100%;
+	height: 100%;
+	
+	a {
+		display: block;
+		height: 100%;
+	}
+	
+	.img {
+		max-width:  234px;
+		margin-bottom: $base*0.75;
+	}
+	
+	h3 {
+		text-transform: lowercase;
+		padding-left: $base*0.5;
+		margin-bottom: $base*0.5;
+		margin-top: 0;
+		font-size: 1em;
+	}
+	
+	@if $color == blue {
+		border: 4px solid $color-link-one;
+		h3 {
+			color: $color-link-one;
+		}
+	}
+	@else {
+		border: 4px solid $color-link-two;
+		h3 {
+			color: $color-link-two;
+		}
+	}
+}
+
+@mixin pic-block-bg($color : blue){
+	
+	height: 100%;
+	
+	a {
+		display: block;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		@include transition(all 0.3s);
+	}
+	
+	.img {
+		position: relative;
+		@include transition(all 0.3s);
+		&:before {
+			content:  '';
+			display: block;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			@include transition(all 0.3s);
+		}
+	}
+	
+	h3 {
+		position: absolute;
+		left: 0;
+		bottom: $base/4;
+		background: $color-white;
+		text-transform: lowercase;
+		padding: $base/4 $base/2;
+		margin-top: 0;
+		font-size: 1em;
+	}
+	
+	@if $color == blue {		
+		h3 {
+			color: $color-link-one;
+		}
+		.img:before {
+			background: rgba(32,63,166, 0.55);
+		}
+		
+		a {
+			background: rgba(32,63,166, 0.6);
+		}
+	}
+	@else {		
+		h3 {
+			color: $color-link-two;
+		}
+		.img:before {
+			background: rgba(177,15,11, 0.55);
+		}
+		a {
+			background: rgba(177,15,11, 0.6);
+		}
+	}
+	
+	a:hover, a:focus, a:active {
+		background: $color-link-three;
+		padding: 1px;
+		.img {
+			margin: 5px;
+		}
+		.img:before {
+			background: transparentize($color-link-three, 0.95);
+		}
+		h3 {
+			color: $color-link-three;
+		}
+	}
+}
+
+@mixin text-block($color : blue) {
+	height: 100%;
+	
+	a {
+		display: block;
+		position: relative;
+		width: 100%;
+		padding: $base*0.8;
+		height: 100%;
+		overflow: hidden;
+		@include transition(all 0.3s);
+	}
+	
+	h3 {
+		color: $color-white;
+		margin-bottom: $base/2;
+		margin-top: 0;
+		font-size: 1em;
+		text-transform: lowercase;
+	}
+	
+	.desc {
+		color: $color-white;
+	}
+	
+	@if $color == blue {		
+		a {
+			background: $color-link-one;
+		}
+	}
+	@else {		
+		a {
+			background: $color-link-two;
+		}
+	}
+	
+	a:hover, a:focus, a:active {
+		background: $color-link-three;
+	}
+}
+
+
+/*.pictured-block.blue.thumb {
+	@include pic-block-border(blue);
+}
+
+.pictured-block.red.thumb {
+	@include pic-block-border(red);
+}*/
+
+.pictured-block.blue.bg {
+	@include pic-block-bg(blue);
+}
+
+.pictured-block.red.bg {
+	@include pic-block-bg(red);
+}
+
+.text-block.blue {
+	@include text-block(blue);
+}
+
+.text-block.red {
+	@include text-block(red);
+}
+
+/** Films **/
+.film-intro {
+	@include rem('margin-bottom', $base*1.5);
+}
+
+.film-data {	
+	dt {
+		float: left;
+		clear: left;		
+		margin-right: 10px;
+		font-weight: bold;
+		padding-top: 10px;
+		&:nth-of-type(1) {
+			padding-top: 0;
+		}
+	}
+	
+	dd {
+		padding-top: 10px;
+		p {
+			margin-top: 0;
+		}
+		&:nth-of-type(1) {
+			padding-top: 0;
+		}
+	}
+	
+}
+
+.preview-item  {	
+	border-bottom: 1px solid $color-border-normal;
+	@include rem('padding', $base/2 0);
+	
+	&:first-child {
+		border-top: 1px solid $color-border-normal;
+	}
+	
+	.lg-3 {
+		text-align: right;
+		font-size: 0.9em;
+		@include for(medium-screens){
+			font-size: 1em;
+		}
+	}
+}
+
+
+/* Help */
+#leyka-payment-form {
+	.amount.flexible input {
+		border-color: $color-link-two;
+		&:focus {
+			border-color: $color-link-three;
+		}
+	}
+	
+	a, a:visited {
+		color: $color-link-two;
+		&:hover, &:focus, &:active {
+			color: $color-link-three;
+			border-color: $color-link-three;
+		}
+	}
+	
+	input[type="text"]:focus {
+		border-color: $color-text-semi;
+	}
+	input[type="submit"] {
+		@include fixed-button($color-link-two, 16px);
+	}
+	
+	.leyka-form-footer {
+		a, a:visited {
+			color: $color-text-black;
+			&:hover, &:focus, &:active {
+				color: $color-link-three;
+				border-color: $color-link-three;
+			}
+		}		
+	}
+}
+
+
+#leyka-copy {
+	background: #f9f9f9;
+	border-color: #d1d1d1;
+}
+
+
+/** In-page elements */
+.entry-content {
+	@include post-content-elements;
+	@include post-content-defaults;	
+}
+
+
+.with_frm_style .frm_top_container label.frm_primary_label,
+.with_frm_style .frm_hidden_container label.frm_primary_label,
+.with_frm_style .frm_pos_top {
+	padding-bottom: 4px;
+}
+
+.frm_submit input {
+	@include fixed-button($color-link-two, 18px);
+	margin-top: 1em;
+}
+
+
+
+/** Homepage */
+.home-intro {
+	
+	.home-banner {
+		background: #f1f1f1;
+		border: 2px solid $color-text-black;
+	}
+	
+	.banner-img {		
+		@include rem('padding', $base);
+		
+		img {
+			max-width: 100%;
+		}
+		
+		@include for(large-screens){
+			@include rem('padding-top', $base*1.5);
+			@include rem('padding-bottom', $base*1.5);			
+		}
+	}
+	
+	.banner-link {		
+		background: $color-white;		
+		@include rem('margin', $base*0.75 -2px);		
+		
+		a {
+			display: block;
+			color: $color-text-black;			
+			@include rem('padding', $base*0.8 $base);
+			font-weight: bold;
+			@include transition-all(0.3s);
+			border: 2px solid $color-text-black;
+			
+			&:hover, &:focus, &:active {
+				color: $color-link-two;
+				border-color: $color-link-two;
+			}
+		}
+		
+		@include for(medium-screens){
+			width: 80%;			
+			margin-left: 20%;
+			a {
+				margin-right: -2px;
+			}
+		}
+		
+		@include for(large-screens){
+			width: 60%;
+			margin-left: 40%;			
+		}
+	}
+	
+	.intro-text {
+		color: $color-text-black;
+		@include rem('font-size', 28px);
+		line-height: 1.2;
+		@include rem('padding', $base*1.5 $base);		
+		text-align: center;
+		max-width: 875px + $base*2;		
+		margin: 0 auto;
+		
+		@include for(medium-screens){
+			@include rem('font-size', 36px);
+			@include rem('padding', $base*2 $base);	
+		}
+	}	
+}
+
+.home-news {
+	
+	h2 {
+		@include widget-title(40px);
+		text-align: center;
+		@include rem('margin-bottom', $base*2);
+		@include rem('margin-top', $base/2);
+		
+		span {
+			position: relative;
+			line-height: 50px;
+			padding-left: 70px;
+			
+			&:before {
+				content:  '';
+				display: block;
+				width: 63px;
+				height: 50px;
+				background: transparent url(../img/zoom.png) no-repeat 0 0;
+				background-image: url(../img/zoom.svg);
+				position: absolute;
+				top: 0;
+				left: 0;
+				
+			}
+		}
+	}
+	
+	@include for(large-screens){
+		.home-news-posts {
+			margin: 0 10%;
+		}
+	}
+	
+	.all-news {
+		position: relative;
+		text-align: center;
+		z-index: 1;		
+		@include rem('margin', $base 0);
+		
+		&:before {
+			content:  '';
+			display: block;
+			width: 100%;
+			height: 5px;
+			background: #d3d3d3;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -2px;
+			z-index: -1;
+		}
+		a {
+			display: inline-block;
+			text-transform: lowercase;
+			background: $color-white;
+			color: $color-text;			
+			@include rem('padding', $base/2 $base);
+			
+			&:hover {
+				color: $color-link-two;
+			}
+		}
+	}
+}
+
+
+.home-cta {	
+	
+	p {
+		@include rem('font-size', 21px);
+		font-weight: normal;
+	}
+	
+	.cta-block-one {
+		@include for(medium-screens){
+			@include rem('padding', $base 0);
+		}
+	}
+	
+	.cta-block-two {
+		background: $color-secondary;		
+		
+		@include rem('padding', $base*0.9 $base*1.5 $base);
+		
+		h4 {
+			font-family: $sans;
+			@include rem('font-size', 21px);
+			font-weight: normal;
+			margin: 0;
+		}
+		p {
+			margin: 0;
+		}
+		
+		strong {
+			@include rem('font-size', 30px);
+			font-weight: normal;
+		}
+		
+		.ghost-button {			
+			display: inline-block;
+			text-transform: uppercase;
+			border: 3px solid $color-link-two;
+			color: $color-link-two;
+			@include rem('padding', $base/4 $base);
+			@include rem('margin-top', 10px);
+			@include transition-all(0.3s);
+			
+			&:hover, &:focus, &:active {
+				background: $color-link-two;
+				color: $color-white;
+			}
+		}
+	}
+
+}
+
+
+/** 404 **/
+section.error-404 {
+	max-width: 800px;
+	margin: 0 auto;
+	min-height: 400px;
+}

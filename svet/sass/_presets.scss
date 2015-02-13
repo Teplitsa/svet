@@ -1,0 +1,217 @@
+/*---------------------------------------------------------
+ Presets (_presets.scss)
+-------------------------------------------------------- */
+
+//Fonts
+$sans:        		'Ubuntu Mono', Monaco, monospace;
+$heading:        	'Clearsans', sans-serif;
+$mono: 				'Ubuntu Mono', Monaco, monospace;
+
+//Break points
+$one:				500px;
+$two:				850px;
+$three:				1100px;
+
+//Grid
+$width:				1110px;
+$col:				62px;
+$gut:				33px;
+
+//Baseline
+$base: 				32px;
+
+
+// Color
+$color-text:   #333;
+$color-white:  #ffffff;
+$color-link-one: #203FA6;
+$color-link-two: #B10F0B;
+$color-link-three: #701398;
+
+$color-secondary:  #f5f5f5;
+$color-text-black: #111111;
+$color-text-semi:  #4a4a4a;
+$color-text-light: #999999;
+
+$color-border-normal: #dfdfdf;
+$color-border-light:  #EAEAEA;
+
+
+//Element
+$indent: 1.5em;
+$rule: 	 1px solid $color-border-normal;
+$sidebar-width: 280px;
+
+//Mixins
+@mixin post-title($size: 30px) {
+	font: {		
+		weight: normal;
+		family: $heading;
+	}
+	
+	line-height: 1.1;
+	@include rem('font-size', $size);
+	color: $color-text-black;	
+	a {
+		color: $color-text-black;
+		border-bottom: 1px solid transparent;
+		@include transition-all(0.3s);
+		
+		&:hover, &:focus, &:active {
+			color: $color-link-three;
+			border-color: $color-link-three;
+		}
+	}	
+}
+
+@mixin widget-title($size: 28px) {
+	font: {
+		family: $heading;		
+		weight: normal;
+	}
+	
+	@include rem('font-size', $size);
+	color: $color-text-black;	
+	text-transform: uppercase;
+	margin-bottom: 0.5em;
+}
+
+@mixin section-title($size: 50px) {
+	font: {
+		family: $heading;		
+		weight: normal;
+	}
+	
+	@include rem('font-size', $size);
+	line-height: 1.1;
+	color: $color-text-black;	
+	//text-transform: uppercase;	
+}
+
+
+/*@mixin lead {
+	font: {
+		family: $titleFont;
+		size: 18px;
+	}
+	line-height: $tightLH;
+	color: $titleDarkC;
+	@include smart-margin($pMargin);
+}*/
+
+@mixin logo-frame {	
+	height: 0;
+	padding-bottom: 65%;
+	position: relative;
+	width: 100%;
+	span,
+	a {
+		display: inline-block;
+		height: 100%;
+		position: absolute;
+		width: 100%;		
+		text-align: center;
+		img {
+			display: inline;
+			height: auto;
+			max-height: 98%;
+			max-width: 100%;
+			vertical-align: middle;
+			width: auto;
+		}
+	}	
+}
+
+
+/** button **/
+@mixin button($color, $size : 14px) {
+	display: inline-block;
+	background: $color;
+	color: $color-white;	
+	@include rem('font-size', $size);
+	font-family: $sans;
+	//text-transform: lowercase;
+	padding: 0.5em 1.2em 0.5em;
+	@include transition(all 0.3s ease-in-out);
+	
+	&:visited {
+		background: $color;
+		color: $color-white;
+	}
+	&:hover, &:focus, &:active {
+		background: darken($color, 10%);
+		color: $color-white;
+		@include transform(scale(1.05));
+	}	
+}
+
+@mixin fixed-button($color, $size : 14px) {
+	@include button($color, $size);
+	@include border-radius(0px);
+	-webkit-box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0);
+	box-shadow:  0px 0px 0px 0px rgba(255, 255, 255, 0);
+	cursor: pointer;
+	border: none;
+	margin: 0;	
+}
+
+/** label */
+@mixin label($color) {
+	display: inline-block;
+	background: $color;
+	color: $color-white !important;	
+	font-size: inherit;
+	font-family: $sans;	
+	padding: 0.25em 1em 0.25em;
+	@include border-radius(3px);	
+}
+
+
+/** thumbnail **/
+@mixin avatar($padding : 9px, $max_width : 100%){
+	display: block;
+	width: 100%;
+	max-width: $max_width;
+	border: 1px solid $color-border-normal;
+	padding: $padding;
+	text-align: center;
+	img {
+		max-width: 100%;
+		height: auto;
+		vertical-align: middle;
+	}
+}
+
+
+
+
+
+
+@mixin ghost-button($color, $size : 18px) {
+	display: inline-block;
+	color: transparentize($color, 0.15);
+	border: 2px solid transparentize($color, 0.15); 
+	background-color: transparent;
+	cursor: pointer;
+	text-transform: uppercase;
+	font-family: $heading;
+	padding: 0.4em 1.8em 0.45em;	
+	
+	@include rem('font-size', $size);	
+	@include border-radius(6px);		
+	@include transition-all(0.3s);
+	&:hover {
+		border-color: $color;
+		color: $color;
+		background: transparentize($color, 0.9);
+	}	
+}
+
+@mixin single-page-title($size : 40px){
+	@include rem('font-size', $size);			
+	line-height: 1.2;
+	font-weight: normal;
+	@include rem('margin-bottom', $size);	
+	word-break: break-word;
+	-ms-word-break: break-word;
+}
